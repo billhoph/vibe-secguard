@@ -46,20 +46,7 @@ with no Docker and no tools.
 
 ## Install
 
-### Method A — Claude Code plugin (recommended)
-
-If your Claude Code build has the `/plugin` command:
-
-```text
-/plugin marketplace add billhoph/vibe-secguard
-/plugin install vibe-secguard@vibe-secguard
-```
-
-Restart the session and you're done.
-
-### Method B — one-command install (any environment)
-
-Works everywhere, including builds where `/plugin` isn't available:
+One command — works in every Claude Code environment:
 
 ```bash
 git clone https://github.com/billhoph/vibe-secguard.git
