@@ -5,6 +5,12 @@ scans every file Claude writes or edits and feeds any security findings back to
 Claude so they get fixed on the fly — plus on-demand dependency and dynamic
 scans.
 
+> ### ⚠️ Platform: Claude Desktop for **macOS** only (as of now)
+> This tool is built and tested **exclusively for Claude Desktop on macOS** at this
+> stage. It relies on macOS + **Docker Desktop for Mac** behaviour (e.g. the
+> `host.docker.internal` networking the DAST scan uses). Linux and Windows are **not
+> yet supported** — contributions welcome.
+
 | Stage | What | OSS tool | When it runs |
 |-------|------|----------|--------------|
 | **Secrets** | Hardcoded keys/tokens/passwords | **Gitleaks** + built-in regex net | every `Write`/`Edit` |
@@ -46,9 +52,13 @@ with no Docker and no tools.
 
 ## Requirements
 
-- **Docker** — the only hard dependency; every scanner runs from a pinned image.
-  (Optional: `brew install semgrep gitleaks trivy` for faster native scans — auto-detected.)
-- **Python 3** and **bash** — present on macOS/Linux by default.
+- **macOS** with **Claude Desktop** (the only supported platform right now).
+- **[Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/)** —
+  installed **and running**. This is the one hard dependency; every scanner runs
+  from a pinned Docker image, and the `/dast` scan reaches your app via Docker
+  Desktop's `host.docker.internal`.
+  *(Optional: `brew install semgrep gitleaks trivy` for faster native scans — auto-detected.)*
+- **Python 3** and **bash** — both ship with macOS.
 
 ## Install
 
