@@ -1,0 +1,11 @@
+{
+  "name": "vibe-secguard",
+  "version": "0.1.0",
+  "description": "Automatic security scanning for vibe-coded projects: runs SCA, secret scanning, and SAST on every file Claude writes or edits, plus on-demand DAST against the running app. Uses common OSS scanners (Semgrep, Gitleaks, Trivy, OWASP ZAP) via Docker with native-binary fallback.",
+  "author": {
+    "name": "billho"
+  },
+  "keywords": ["security", "sast", "sca", "dast", "secrets", "semgrep", "gitleaks", "trivy", "zap"],
+  "hooks": "./hooks/hooks.json",
+  "commands": "./commands"
+}

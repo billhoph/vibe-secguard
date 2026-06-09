@@ -1,0 +1,16 @@
+{
+  "name": "vibe-secguard",
+  "owner": {
+    "name": "billho"
+  },
+  "metadata": {
+    "description": "Security scanning for vibe-coded projects."
+  },
+  "plugins": [
+    {
+      "name": "vibe-secguard",
+      "source": ".",
+      "description": "Auto SCA + Secret + SAST on every edit, plus on-demand OWASP ZAP DAST. OSS scanners via Docker with native fallback."
+    }
+  ]
+}
