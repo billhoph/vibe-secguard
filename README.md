@@ -15,6 +15,12 @@ scans.
 Findings are **non-blocking** (warn mode): edits go through, but Claude sees the
 issues as feedback and can fix them immediately.
 
+## What it looks like
+
+![vibe-secguard in action — clean static sweep (Gitleaks/Semgrep/Grype) on the left, a live OWASP ZAP DAST report on the right](docs/demo.png)
+
+*Left: the static sweep (`/secscan`) reporting a clean Secrets/SAST/SCA result with a prioritized summary. Right: a real OWASP ZAP baseline report from `/dast` against the running app (`host.docker.internal:4173`), showing the Medium/Low alert breakdown.*
+
 ## How it works
 
 - A `PostToolUse` hook (`scripts/scan_file.sh`) fires after `Write`/`Edit`/`MultiEdit`/`NotebookEdit`.
